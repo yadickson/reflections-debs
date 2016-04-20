@@ -1,0 +1,17 @@
+Source: reflections
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Yadickson Soto <yadickson@gmail.com>
+Build-Depends: debhelper (>= 9), cdbs, default-jdk, maven-debian-helper (>= 1.5)
+Build-Depends-Indep: libguava-java, libjavassist-java, libdom4j-java, libgoogle-gson-java, libcommons-vfs-java
+Standards-Version: 3.9.6
+Homepage: http://github.com/ronmamo/reflections
+
+Package: libreflections-java
+Architecture: all
+Depends: ${misc:Depends}, ${maven:Depends}
+Suggests: ${maven:OptionalDepends}
+Description: Java runtime metadata analysis - reflections
+ Java runtime metadata analysis, in the spirit of Scannotations
+

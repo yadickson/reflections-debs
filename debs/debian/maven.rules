@@ -1,0 +1,13 @@
+
+com.google.guava guava bundle s/.*/debian/ * *
+com.google.guava guava s/jar/bundle/ s/.*/debian/ * *
+org.reflections reflections jar s/.*/debian/ * *
+s/jboss/javassist/ javassist * s/.*/debian/ * *
+org.jsr-305 s/ri/jsr305/ * s/0\..*/0.x/ * *
+s/com.google.code.findbugs/org.jsr-305/ jsr305 jar s/.*/0.x/ * *
+s/com.google.code.google-collections/com.google.guava/ s/google-collect/guava/ s/jar/bundle/ s/.*/debian/ * *
+s/com.google.collections/com.google.guava/ s/google-collections/guava/ s/jar/bundle/ s/.*/debian/ * *
+s/org.apache.tomcat/javax.el/ el-api jar s/.*/2.1/ * *
+s/org.apache.tomcat/javax.servlet/ jsp-api jar s/.*/2.1/ * *
+s/org.apache.tomcat/javax.servlet/ servlet-api jar s/.*/2.5/ * *
+s/org.javassist/javassist/ javassist jar s/.*/debian/ * *

@@ -1,0 +1,32 @@
+--- reflections-0.9.11+git20160224~b2114c7/pom.xml	2016-02-24 08:52:20.000000000 -0430
++++ reflections-0.9.11+git20160224~b2114c7~/pom.xml	2016-04-20 09:03:21.996805697 -0430
+@@ -55,7 +55,7 @@
+     <properties>
+         <guava.version>18.0</guava.version>
+         <javassist.version>3.18.2-GA</javassist.version>
+-        <jdk.version>1.7</jdk.version>
++        <jdk.version>1.5</jdk.version>
+         <additionalparam>-Xdoclint:none</additionalparam>
+     </properties>
+ 
+@@ -251,6 +251,20 @@
+                     <target>${jdk.version}</target>
+                 </configuration>
+             </plugin>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-jar-plugin</artifactId>
++                <configuration>
++                    <archive>
++                        <manifest>
++                            <addClasspath>true</addClasspath>
++                            <classpathLayoutType>custom</classpathLayoutType>
++                            <customClasspathLayout>/usr/share/java/$${artifact.artifactId}$${dashClassifier?}.$${artifact.extension}</customClasspathLayout>
++                        </manifest>
++                    </archive>
++                </configuration>
++                <version>2.4</version>
++            </plugin>
+         </plugins>
+     </build>
+ 
